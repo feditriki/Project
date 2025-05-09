@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #111, #222);
+  color: #eee;
+}
+
+.top-bar {
+  background-color: #e63946;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.top-bar h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.top-bar .slogan {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: #111;
+  padding: 1rem 0;
+}
+
+.nav-menu li {
+  margin: 0 2rem;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: red;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.recipe-card {
+  border: 2px solid #e63946;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.recipe-card h2.recipe-name {
+  color: #e63946;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.recipe-card p {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.recipe-card img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #e63946;
+}
+
+.recipe-card .rating .star {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+.recipe-card .rating .star.empty {
+  color: #bbb;
+}
+
+.recipe-card a {
+  color: #e63946;
+  text-decoration: none;
+}
+
+.recipe-card a:hover {
+  text-decoration: underline;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.contact-container h2 {
+  text-align: center;
+  color: #e63946;
+  margin-bottom: 30px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #eee;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+.contact-form button {
+  background-color: #e63946;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #c5303a;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #111;
+  color: #999;
+  margin-top: 50px;
+}
+
+#backToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #e63946;
+  color: white;
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 50%;
+  font-size: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#backToTopBtn:hover {
+  background-color: #c5303a;
+  transform: scale(1.1);
+}
+
+#goToBottomBtn {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 25px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #e63946;
+  color: white;
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 50%;
+  font-size: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#goToBottomBtn:hover {
+  background-color: #c5303a;
+  transform: scale(1.1);
+}
+
+.media-frame {
+  border: 2px solid #e63946;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 2rem 0;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #e63946;
+}
+
+.hero-image:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #e63946;
+}
+
+.order-table {
+  width: 90%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #ff4444;
+}
+
+.order-table th, .order-table td {
+  border: 1px solid #ff4444;
+  padding: 1rem;
+  text-align: center;
+}
+
+.order-table th {
+  background-color: #2a2a2a;
+  color: #ff4444;
+}
+
+.order-table tr:hover {
+  background-color: #2c2c2c;
+}
+
+.order-btn {
+  background-color: #ff4444;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+  background-color: #ff2222;
+}
+
+.centered-title {
+  text-align: center;
+  color: #ff4444;
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+
+.auth-buttons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.auth-btn {
+  background-color: #333;
+  color: white;
+  padding: 12px 18px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #e63946;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 10px;
+}
+
+.auth-btn:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+.auth-btn.signup {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #e63946;
+}
+
+.auth-btn.signup:hover {
+  background-color: #e63946;
+  color: white;
+}

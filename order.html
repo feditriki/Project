@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Recipes - World Flavors</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .ordered-btn {
+      background-color: #4caf50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="top-bar">
+      <h1>Welcome to World Flavors</h1>
+      <p class="slogan">Exploring cultures one dish at a time</p>
+      <div class="auth-buttons">
+        <button class="auth-btn"> 
+          <a href="signup.html" style="color: white; text-decoration: none;">Sign Up</a>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recettes.html">Recipes</a></li>
+      <li><a href="techniques.html">Techniques</a></li>
+      <li><a href="restaurants.html">Restaurants</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="centered-title">Order Your Favorite Recipes</h1>
+  <table class="order-table">
+    <thead>
+      <tr>
+        <th>Recipe Name</th>
+        <th>Price</th>
+        <th>Order</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Spaghetti Carbonara</td><td>10 TND</td><td><button class="order-btn" onclick="orderRecipe(this)">Order</button></td></tr>
+      <tr><td>Chicken Curry</td><td>12 TND</td><td><button class="order-btn" onclick="orderRecipe(this)">Order</button></td></tr>
+      <tr><td>Couscous</td><td>8 TND</td><td><button class="order-btn" onclick="orderRecipe(this)">Order</button></td></tr>
+      <tr><td>Pizza Margherita</td><td>9 TND</td><td><button class="order-btn" onclick="orderRecipe(this)">Order</button></td></tr>
+      <tr><td>Beef Tajine</td><td>14 TND</td><td><button class="order-btn" onclick="orderRecipe(this)">Order</button></td></tr>
+      <tr><td>Seafood Paella</td><td>18 TND</td><td><button class="order-btn" onclick="orderRecipe(this)">Order</button></td></tr>
+      <tr><td>Shakshuka</td><td>7 TND</td><td><button class="order-btn" onclick="orderRecipe(this)">Order</button></td></tr>
+      <tr><td>Falafel Wrap</td><td>6 TND</td><td><button class="order-btn" onclick="orderRecipe(this)">Order</button></td></tr>
+      <tr><td>Grilled Kebab</td><td>11 TND</td><td><button class="order-btn" onclick="orderRecipe(this)">Order</button></td></tr>
+      <tr><td>Fish Couscous</td><td>13 TND</td><td><button class="order-btn" onclick="orderRecipe(this)">Order</button></td></tr>
+      <tr><td>Vegetable Stir Fry</td><td>9 TND</td><td><button class="order-btn" onclick="orderRecipe(this)">Order</button></td></tr>
+      <tr><td>Lasagna</td><td>15 TND</td><td><button class="order-btn" onclick="orderRecipe(this)">Order</button></td></tr>
+    </tbody>
+  </table>
+
+  <footer id="pageBottom">
+    <p>&copy; 2025 World Flavors. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function orderRecipe(button) {
+      button.classList.add("ordered-btn");
+      button.textContent = "Ordered";
+    }
+  </script>
+
+</body>
+</html>

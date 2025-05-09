@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>World Flavors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <h1>Welcome to World Flavors</h1>
+      <p class="slogan">Exploring cultures one dish at a time</p>
+	    <div class="auth-buttons">
+      <button class="auth-btn"> <a href="signup.html" style="color: white; text-decoration: none;">Sign In</a></button>
+      <button class="auth-btn"> <a href="signup.html" style="color: white; text-decoration: none;">Sign Up</a></button>
+		</div>
+    </div>
+  </header>
+
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recettes.html">Recipes</a></li>
+      <li><a href="techniques.html">Techniques</a></li>
+      <li><a href="restaurants.html">Restaurants</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="media-frame">
+    <img src="Figures/main-dish.jpg" alt="Hero Dish" class="hero-image" />
+  </section>
+
+  <section id="promo-video" class="media-frame">
+    <h2>Watch Our Promo Video</h2>
+    <div class="video-container">
+      <video controls width="80%">
+        <source src="Figures/Restaurant food cinematic video advertisement.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </section>
+
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+  <button onclick="scrollToBottom()" id="goToBottomBtn" title="Go to bottom">↓</button>
+
+  <footer id="pageBottom">
+    <p>&copy; 2025 World Flavors. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.onscroll = function () {
+      const topBtn = document.getElementById("backToTopBtn");
+      const bottomBtn = document.getElementById("goToBottomBtn");
+      const scrollY = window.scrollY;
+      const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+      topBtn.style.display = scrollY > 200 ? "block" : "none";
+      bottomBtn.style.display = scrollY < pageHeight - 200 ? "block" : "none";
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function scrollToBottom() {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

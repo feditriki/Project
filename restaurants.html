@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Best Restaurants</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <h1>Top Rated Restaurants</h1>
+      <p class="slogan">Discover must-visit dining spots</p>
+	    <div class="auth-buttons">
+      <button class="auth-btn"> <a href="signup.html" style="color: white; text-decoration: none;">Sign In</a></button>
+      <button class="auth-btn"> <a href="signup.html" style="color: white; text-decoration: none;">Sign Up</a></button>
+		</div>
+    </div>
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recettes.html">Recipes</a></li>
+      <li><a href="techniques.html">Techniques</a></li>
+      <li><a href="restaurants.html">Restaurants</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  </header>
+
+  <main class="recipes-grid">
+    <div class="recipe-card">
+      <h2 class="recipe-name">Osteria Francescana</h2>
+      <p><strong>Location:</strong> Modena, Italy</p>
+      <p><strong>Specialty:</strong> Modern Italian cuisine</p>
+      <p><strong>Rating:</strong>
+        <span class="rating">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9734;</span>
+        </span>
+      </p>
+      <p><strong>Visit:</strong> <a href="https://www.osteriafrancescana.it/" target="_blank">Official Website</a></p>
+      <img src="Figures/osteria.jpg" alt="Osteria Francescana">
+    </div>
+
+    <div class="recipe-card">
+      <h2 class="recipe-name">Noma</h2>
+      <p><strong>Location:</strong> Copenhagen, Denmark</p>
+      <p><strong>Specialty:</strong> New Nordic cuisine</p>
+      <p><strong>Rating:</strong>
+        <span class="rating">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+        </span>
+      </p>
+      <p><strong>Visit:</strong> <a href="https://noma.dk/" target="_blank">Official Website</a></p>
+      <img src="Figures/noma.jpg" alt="Noma Restaurant">
+    </div>
+
+    <div class="recipe-card">
+      <h2 class="recipe-name">El Celler de Can Roca</h2>
+      <p><strong>Location:</strong> Girona, Spain</p>
+      <p><strong>Specialty:</strong> Catalan cuisine with modern twist</p>
+      <p><strong>Rating:</strong>
+        <span class="rating">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9734;</span>
+        </span>
+      </p>
+      <p><strong>Visit:</strong> <a href="https://cellercanroca.com/" target="_blank">Official Website</a></p>
+      <img src="Figures/can-roca.jpg" alt="El Celler de Can Roca">
+    </div>
+
+    <div class="recipe-card">
+      <h2 class="recipe-name">Gaggan Anand</h2>
+      <p><strong>Location:</strong> Bangkok, Thailand</p>
+      <p><strong>Specialty:</strong> Progressive Indian cuisine</p>
+      <p><strong>Rating:</strong>
+        <span class="rating">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9734;</span>
+        </span>
+      </p>
+      <p><strong>Visit:</strong> <a href="https://www.gaggananand.com/" target="_blank">Official Website</a></p>
+      <img src="Figures/gaggan.jpg" alt="Gaggan Anand">
+    </div>
+
+    <div class="recipe-card">
+      <h2 class="recipe-name">Mirazur</h2>
+      <p><strong>Location:</strong> Menton, France</p>
+      <p><strong>Specialty:</strong> Mediterranean cuisine</p>
+      <p><strong>Rating:</strong>
+        <span class="rating">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9734;</span>
+        </span>
+      </p>
+      <p><strong>Visit:</strong> <a href="https://www.mirazur.fr/" target="_blank">Official Website</a></p>
+      <img src="Figures/mirazur.jpg" alt="Mirazur">
+    </div>
+
+    <div class="recipe-card">
+      <h2 class="recipe-name">Le Bernardin</h2>
+      <p><strong>Location:</strong> New York City, USA</p>
+      <p><strong>Specialty:</strong> Seafood fine dining</p>
+      <p><strong>Rating:</strong>
+        <span class="rating">
+          <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9734;</span>
+        </span>
+      </p>
+      <p><strong>Visit:</strong> <a href="https://www.le-bernardin.com/" target="_blank">Official Website</a></p>
+      <img src="Figures/le-bernardin.jpg" alt="Le Bernardin">
+    </div>
+
+  </main>
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+  <button onclick="scrollToBottom()" id="goToBottomBtn" title="Go to bottom">↓</button>
+
+  <footer id="pageBottom">
+    <p>&copy; 2025 World Flavors. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.onscroll = function () {
+      const topBtn = document.getElementById("backToTopBtn");
+      const bottomBtn = document.getElementById("goToBottomBtn");
+      const scrollY = window.scrollY;
+      const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+      topBtn.style.display = scrollY > 200 ? "block" : "none";
+      bottomBtn.style.display = scrollY < pageHeight - 200 ? "block" : "none";
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function scrollToBottom() {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  </script>
+ 
+</body>
+</html>

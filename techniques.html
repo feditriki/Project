@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking Techniques</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <h1>Cooking Techniques</h1>
+      <p class="slogan">Master the skills behind every great dish</p>
+	    <div class="auth-buttons">
+      <button class="auth-btn"> <a href="signup.html" style="color: white; text-decoration: none;">Sign In</a></button>
+      <button class="auth-btn"> <a href="signup.html" style="color: white; text-decoration: none;">Sign Up</a></button>
+		</div>
+    </div>
+  </header>
+
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="recettes.html">Recipes</a></li>
+      <li><a href="techniques.html">Techniques</a></li>
+      <li><a href="restaurants.html">Restaurants</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="recipes-grid">
+    <div class="recipe-card">
+      <h2 class="recipe-name">Knife Skills</h2>
+      <p>Proper knife skills can make cooking faster and safer. Learn how to chop, slice, and dice like a pro.</p>
+      <img src="Figures/trypping an onion.gif" alt="A person practicing knife skills in the kitchen">
+      <p><strong>How to Do It:</strong> Watch the <a href="https://www.youtube.com/watch?v=YrHpeEwk_-U" target="_blank">video tutorial</a>.</p>
+    </div>
+
+    <div class="recipe-card">
+      <h2 class="recipe-name">Perfecting Sauces</h2>
+      <p>Learn how to make rich and creamy sauces that will elevate any dish to the next level!</p>
+      <img src="Figures/sauce-making.gif" alt="Chef preparing a sauce in a kitchen">
+      <p><strong>How to Do It:</strong> Watch the <a href="https://www.youtube.com/watch?v=xniS7kMpW4I" target="_blank">video tutorial</a>.</p>
+    </div>
+	<div class="recipe-card">
+	  <h2 class="recipe-name">Searing Meats</h2>
+	  <p>Master the art of searing to lock in flavor and create a beautiful crust on your meat.</p>
+	  <img src="Figures/searing-meat.gif" alt="Meat being seared in a hot pan with smoke rising">
+	  <p><strong>How to Do It:</strong> Watch the <a href="https://www.youtube.com/watch?v=AmC9SmCBUj4" target="_blank">video tutorial</a>.</p>
+	</div>
+
+
+	<div class="recipe-card">
+	  <h2 class="recipe-name">Plating Like a Pro</h2>
+	  <p>Learn how to plate your dishes beautifully so they look as amazing as they taste.</p>
+	  <img src="Figures/plating.gif" alt="A chef artistically plating food with tweezers">
+	  <p><strong>How to Do It:</strong> Watch the <a href="https://www.youtube.com/watch?v=1LzZbROiMcY" target="_blank">video tutorial</a>.</p>
+	</div>
+	<div class="recipe-card">
+	  <h2 class="recipe-name">Braising</h2>
+	  <p>A slow-cooking method that turns tough cuts of meat into tender, flavorful masterpieces. Perfect for stews and comfort food.</p>
+	  <img src="Figures/braising.gif" alt="A pot with meat and vegetables slowly braising in liquid">
+	  <p><strong>How to Do It:</strong> Watch the <a href="https://www.youtube.com/watch?v=qt_rPBkdtQc&t=516s" target="_blank">video tutorial</a>.</p>
+	</div>
+
+	<div class="recipe-card">
+	  <h2 class="recipe-name">Tempering Spices</h2>
+	  <p>A crucial technique in Indian and Middle Eastern cuisine where whole spices are briefly fried in hot oil to release deep, rich aromas.</p>
+	  <img src="Figures/Tempering Spices.gif" alt="Whole spices sizzling in a pan of oil">
+	  <p><strong>How to Do It:</strong> Watch the <a href="https://www.youtube.com/watch?v=bsYzWK3cxOM" target="_blank">video tutorial</a>.</p>
+	</div>
+
+  </main>
+
+  <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">↑</button>
+  <button onclick="scrollToBottom()" id="goToBottomBtn" title="Go to bottom">↓</button>
+
+  <footer id="pageBottom">
+    <p>&copy; 2025 World Flavors. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.onscroll = function () {
+      const topBtn = document.getElementById("backToTopBtn");
+      const bottomBtn = document.getElementById("goToBottomBtn");
+      const scrollY = window.scrollY;
+      const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+      topBtn.style.display = scrollY > 200 ? "block" : "none";
+      bottomBtn.style.display = scrollY < pageHeight - 200 ? "block" : "none";
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function scrollToBottom() {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
